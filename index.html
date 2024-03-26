@@ -1,28 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <title>Frontend Mentor | QR code component</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | QR code component</title>
+        :root {
+            --blue: #2c7dfa;
+            --blue-shade: #3685ff;
+            --dark-navy: #1f314f;
+            --grey: #6f7787;
+            --light-grey: #d5e1ef;
+            --white: #fff;
+            --font-family: "Outfit", sans-serif;
+        }
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+        @font-face {
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/outfit/v11/QGYyz_MVcBeNP4NjuGObqx1XmO1I4TC1O4a0EwIrq6c.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/outfit/v11/QGYyz_MVcBeNP4NjuGObqx1XmO1I4deyO4a0EwIrq6c.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        .main {
+            min-block-size: 100 dvh;
+            inline-size: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--light-grey);
+        }
+
+        .qr-component {
+            border-radius: 2rem;
+            box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.05);
+            background: var(--white);
+            padding: 1.6rem;
+            inline-size: 32rem;
+            block-size: 49.7rem;
+        }
+
+        .qr-component__figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.4rem;
+        }
+
+        .qr-component__img {
+            max-inline-size: 100%;
+            block-size: auto;
+        }
+
+        .qr-component__caption {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+            text-align: center;
+        }
+
+        .qr-component__title {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 2.2rem;
+            text-align: center;
+            color: var(--dark-navy);
+        }
+
+        .qr-component__description {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 1.5rem;
+            letter-spacing: 0.01em;
+            text-align: center;
+            color: var(--grey);
+        }
+    </style>
 </head>
 <body>
-
-  Improve your front-end skills by building projects
-
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<main class="main">
+    <article class="qr-component">
+        <figure class="qr-component__figure">
+            <img class="qr-component__img" src="./images/image-qr-code.png" alt="QR code to visit Frontend Mentor">
+            <figcaption class="qr-component__caption">
+                <p class="qr-component__title">
+                    Improve your front-end skills by building projects
+                </p>
+                <p class="qr-component__description">
+                    Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+                </p>
+            </figcaption>
+        </figure>
+    </article>
+</main>
 </body>
 </html>
