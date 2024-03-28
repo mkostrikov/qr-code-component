@@ -18,11 +18,12 @@
             --grey: #6f7787;
             --light-grey: #d5e1ef;
             --white: #fff;
-            --font-family: "Outfit", sans-serif;
+            --font-family: "Outfit Regular", sans-serif;
+            --font-family-bold: "Outfit Bold", sans-serif;
         }
 
         @font-face {
-            font-family: 'Outfit';
+            font-family: 'Outfit Regular';
             font-style: normal;
             font-weight: 400;
             font-display: swap;
@@ -31,7 +32,7 @@
         }
 
         @font-face {
-            font-family: 'Outfit';
+            font-family: 'Outfit Bold';
             font-style: normal;
             font-weight: 700;
             font-display: swap;
@@ -81,8 +82,7 @@
         }
 
         .qr-component__title {
-            font-family: var(--font-family);
-            font-weight: 700;
+            font-family: var(--font-family-bold);
             font-size: 2.2rem;
             text-align: center;
             color: var(--dark-navy);
@@ -90,7 +90,6 @@
 
         .qr-component__description {
             font-family: var(--font-family);
-            font-weight: 400;
             font-size: 1.5rem;
             letter-spacing: 0.01em;
             text-align: center;
