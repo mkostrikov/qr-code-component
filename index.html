@@ -96,17 +96,23 @@
             text-align: center;
             color: var(--grey);
         }
+
+        .visually-hidden {
+            position: fixed;
+            transform: scale(0);
+        }
     </style>
 </head>
 <body>
 <main class="main">
+    <h1 class="visually-hidden">QR code to visit Frontend Mentor</h1>
     <article class="qr-component">
         <figure class="qr-component__figure">
             <img class="qr-component__img" src="./images/image-qr-code.png" alt="QR code to visit Frontend Mentor">
             <figcaption class="qr-component__caption">
-                <p class="qr-component__title">
+                <h2 class="qr-component__title">
                     Improve your front-end skills by building projects
-                </p>
+                </h2>
                 <p class="qr-component__description">
                     Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
                 </p>
